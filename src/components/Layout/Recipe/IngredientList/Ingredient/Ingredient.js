@@ -6,7 +6,7 @@ const ingredient = (props) => {
 
     ingredient = (
         <div className={classes.Ingredient}>
-            {props.name}, {props.qty}, {props.units}
+            {props.name} {props.qty} {props.units}
         </div>
     );
 

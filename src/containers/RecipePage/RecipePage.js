@@ -1,6 +1,8 @@
 import React from "react";
 import IngredientList from "../../components/Layout/Recipe/IngredientList/IngredientList";
 import Method from "../../components/Layout/Recipe/Method/Method";
+import Header from "../../components/Layout/Recipe/Header/Header";
+import RecipeImage from "../../bbq_chicken.jpg";
 
 const RecipePage = () => {
     const [ingredients, setIngredients] = React.useState([
@@ -21,9 +23,20 @@ const RecipePage = () => {
         "In the same pan, grill the corn until lightly charred all over, turning regularly, then remove.",
     ]);
 
+    const [header, setHeader] = React.useState({
+        title: "Barbeque chicken",
+        // image: { RecipeImage },
+        description:
+            "Here's how to get your barbecue chicken brilliantly chargrilled, juicy and perfectly cooked",
+    });
+
     return (
         <>
-            <div>Recipe Header component: Image, Title, Description</div>
+            <Header
+                title={header.title}
+                description={header.description}
+                image={RecipeImage}
+            />
             <div style={{ display: "flex" }}>
                 <IngredientList ingredients={ingredients} />
                 <Method instructions={instructions} />

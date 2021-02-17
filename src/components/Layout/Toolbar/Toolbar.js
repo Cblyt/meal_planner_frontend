@@ -1,27 +1,40 @@
 import React from "react";
 import classes from "./Toolbar.module.css";
 import logo from "../../../loqbox_logo_mobile.png";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
-const toolbar = () => {
+const Toolbar = () => {
     return (
         <ul>
-            <li className={classes.logo}>
+            <li className={classes.Logo}>
                 <img src={logo} alt="Give yourself some credit" />
             </li>
             <li>
-                <a href="default.asp">Home</a>
+                <Link to="/">Home</Link>
             </li>
             <li>
-                <a href="news.asp">News</a>
+                <Link to="/recipes">Recipes</Link>
             </li>
             <li>
-                <a href="contact.asp">Contact</a>
+                <Link to="/planner">Planner</Link>
             </li>
             <li>
-                <a href="about.asp">About</a>
+                <Link to="/shopping-list">Shopping List</Link>
+            </li>
+            <li>
+                <Link to="/recipe">RecipePage</Link>
+            </li>
+            <li>
+                <Link to="/create-recipe">Create Recipe</Link>
+            </li>
+            <li>
+                <a href="about.asp">Search bar</a>
+            </li>
+            <li>
+                <a href="about.asp">User component</a>
             </li>
         </ul>
     );
 };
 
-export default toolbar;
+export default Toolbar;

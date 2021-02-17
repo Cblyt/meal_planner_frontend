@@ -3,7 +3,6 @@ import RecipeIngredient from "./Ingredient/Ingredient";
 import classes from "./IngredientList.module.css";
 
 const ingredientList = (props) => {
-    console.log(props.ingredients);
     return (
         <div className={classes.IngredientList}>
             <h4>Ingredients</h4>

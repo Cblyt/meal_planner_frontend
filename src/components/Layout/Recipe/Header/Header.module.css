@@ -1,0 +1,30 @@
+img {
+    width: 33%;
+}
+
+.RecipeInfo {
+    padding-left: 50px;
+    width: 66%;
+}
+
+.RecipeInfo ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+.RecipeInfo li {
+    display: inline-block;
+    text-align: center;
+    padding: 5px 5%;
+    text-decoration: none;
+    color: rgb(36, 152, 190);
+}
+
+.RecipeInfo hr {
+    height: 1px;
+    background-color: rgb(36, 152, 190);
+    border: 0;
+}
