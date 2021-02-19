@@ -11,20 +11,20 @@
     padding: 5px;
     margin: 0 5px;
     width: 80px;
-    border: 1px solid #aa6817;
+    border: 1px solid grey;
     cursor: pointer;
     outline: none;
 }
 
 .IngredientControl button:disabled {
-    background-color: #ac9980;
+    background-color: grey;
     border: 1px solid #7e7365;
     color: #ccc;
     cursor: default;
 }
 
 .IngredientControl button:hover:disabled {
-    background-color: #ac9980;
+    background-color: grey;
     color: #ccc;
     cursor: not-allowed;
 }
@@ -32,27 +32,28 @@
 .Label {
     padding: 10px;
     font-weight: bold;
+    color: #ccc;
     width: 80px;
 }
 
 .IngredientControl .Less {
-    background-color: #d39952;
+    background-color: grey;
     color: white;
 }
 
 .IngredientControl .More {
-    background-color: #8f5e1e;
+    background-color: darkgray;
     color: white;
 }
 
 .IngredientControl .Less:hover,
 .IngredientControl .Less:active {
-    background-color: #daa972;
+    background-color: darkgray;
     color: white;
 }
 
 .IngredientControl .More:hover,
 .IngredientControl .More:active {
-    background-color: #99703f;
+    background-color: grey;
     color: white;
 }

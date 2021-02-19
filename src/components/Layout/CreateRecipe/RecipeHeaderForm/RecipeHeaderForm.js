@@ -1,8 +1,7 @@
 import React from "react";
 import { useInput } from "./UseInput/UseInput";
-import IngredientsControls from "./IngredientControls/IngredientControls";
 
-export default function RecipeHeaderForm() {
+const RecipeHeaderForm = (props) => {
     const { value: name, bind: bindName, reset: resetName } = useInput("");
     const {
         value: description,
@@ -57,4 +56,6 @@ export default function RecipeHeaderForm() {
             </form>
         </>
     );
-}
+};
+
+export default RecipeHeaderForm;

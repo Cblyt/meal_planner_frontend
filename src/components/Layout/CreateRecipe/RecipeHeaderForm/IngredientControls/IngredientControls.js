@@ -2,24 +2,19 @@ import Reac from "react";
 import IngredientControl from "./IngredientControl/IngredientControl";
 import classes from "./IngredientControls.module.css";
 
-const controls = [
-    {
-        label: "Ingredient 1",
-    },
-    {
-        label: "Ingredient 2",
-    },
-    {
-        label: "Ingredient 3",
-    },
-];
-
 const ingredientControls = (props) => {
     return (
         <div className={classes.IngredientControls}>
-            {controls.map((ctrl) => {
+            {props.ingredients.map((ctrl, index) => {
                 return (
-                    <IngredientControl key={ctrl.label} label={ctrl.label} />
+                    <IngredientControl
+                        key={ctrl.id}
+                        label={ctrl.name}
+                        amount={ctrl.amount}
+                        units={ctrl.units}
+                        incremented={() => props.ingredientIncremented(index)}
+                        decremented={() => props.ingredientDecremented(index)}
+                    />
                 );
             })}
         </div>
