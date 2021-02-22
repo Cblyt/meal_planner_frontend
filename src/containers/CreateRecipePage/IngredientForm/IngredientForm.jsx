@@ -8,7 +8,7 @@ const IngredientForm = () => {
 	const [ingredients, setIngredients] = React.useState([]);
 	const [newIngredient, setNewIngredient] = React.useState({
 		name: '',
-		amount: '',
+		amount: 1,
 		units: '',
 	});
 	const [finish, setFinish] = React.useState(false);
@@ -17,7 +17,7 @@ const IngredientForm = () => {
 		setNewIngredient({
 			...newIngredient,
 			[e.target.name]:
-                e.target.name === 'amount' ? parseInt(e.target.value, 10) : e.target.value,
+				e.target.name === 'amount' ? parseInt(e.target.value, 10) : e.target.value,
 		});
 	};
 
@@ -50,8 +50,8 @@ const IngredientForm = () => {
 
 	return (
 		<div className={classes.IngredientForm}>
-			<Modal show={finish}>
-				<IngredientSummary ingredients={ingredients} />
+			<Modal show={finish} modalClosed={finishHandler}>
+				<IngredientSummary ingredients={ingredients} cancel={finishHandler} />
 			</Modal>
 
 			<IngredientControls

@@ -1,16 +1,31 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import Backdrop from '../Backdrop/Backdrop';
 import classes from './Modal.module.css';
 
-const modal = (props) => (
-	<div
-		className={classes.Modal}
-		style={{
-			transform: props.show ? 'translateY(0)' : 'translateY(-100vh)',
-			opacity: props.show ? '1' : '0',
-		}}
-	>
-		{props.children}
-	</div>
+const Modal = ({ show, children, modalClosed }) => (
+	<>
+		<Backdrop show={show} clicked={modalClosed} />
+		<div
+			className={classes.Modal}
+			clciked={modalClosed}
+			style={{
+				transform: show ? 'translateY(0)' : 'translateY(-100vh)',
+				opacity: show ? '1' : '0',
+			}}
+		>
+			{children}
+		</div>
+	</>
 );
 
-export default modal;
+Modal.propTypes = {
+	show: PropTypes.bool.isRequired,
+	children: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node,
+	]).isRequired,
+	modalClosed: PropTypes.func.isRequired,
+};
+
+export default Modal;
