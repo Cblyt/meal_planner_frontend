@@ -26,7 +26,7 @@ const RecipePage = () => {
 	const header = {
 		title: 'Barbeque chicken',
 		description:
-            "Here's how to get your barbecue chicken brilliantly chargrilled, juicy and perfectly cooked",
+			"Here's how to get your barbecue chicken brilliantly chargrilled, juicy and perfectly cooked",
 	};
 
 	return (
