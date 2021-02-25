@@ -11,13 +11,13 @@ const Ingredient = ({ name, qty, units }) => (
 );
 
 Ingredient.defaultProps = {
-	qty: 1,
+	qty: '1',
 	units: 'item',
 };
 
 Ingredient.propTypes = {
 	name: PropTypes.string.isRequired,
-	qty: PropTypes.number,
+	qty: PropTypes.string,
 	units: PropTypes.string,
 };
 

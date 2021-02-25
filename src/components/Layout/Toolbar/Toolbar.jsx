@@ -6,10 +6,9 @@ import logo from '../../../loqbox_logo_mobile.png';
 const Toolbar = () => (
 	<ul className={classes.Ul}>
 		<li className={classes.Logo}>
-			<img src={logo} alt="Give yourself some credit" />
-		</li>
-		<li>
-			<Link to="/">Home</Link>
+			<Link to="/">
+				<img src={logo} alt="Give yourself some credit" />
+			</Link>
 		</li>
 		<li>
 			<Link to="/recipes">Recipes</Link>

@@ -9,9 +9,23 @@ const recipeHeader = (props) => (
 			<div style={{ paddingBottom: '15px' }}>{props.description}</div>
 			<hr />
 			<ul>
-				<li>Serves 6</li>
-				<li>Cooks in 25 minutes</li>
-				<li>Difficulty: Easy</li>
+				<li>
+					Serves:
+					{' '}
+					{props.serves}
+				</li>
+				<li>
+					Cooks in
+					{' '}
+					{props.cookingDuration}
+					{' '}
+					minutes
+				</li>
+				<li>
+					Difficulty:
+					{' '}
+					{props.difficulty}
+				</li>
 			</ul>
 			<hr />
 		</div>
