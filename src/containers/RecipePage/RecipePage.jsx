@@ -1,24 +1,32 @@
 import React from 'react';
-import axios from 'axios';
-import IngredientList from '../../components/Layout/Recipe/IngredientList/IngredientList';
-import Method from '../../components/Layout/Recipe/Method/Method';
-import Header from '../../components/Layout/Recipe/Header/Header';
+import { useParams } from 'react-router-dom';
+import APIRequest from '../../components/Helpers/APIHandler/APIHandler';
+import IngredientList from '../../components/Recipe/IngredientList/IngredientList';
+import Method from '../../components/Recipe/Method/Method';
+import Header from '../../components/Recipe/Header/Header';
 import RecipeImage from '../../bbq_chicken.jpg';
 
 const RecipePage = () => {
 	const [recipe, setRecipe] = React.useState({
+		name: '',
 		description: '',
+		cooking_duration: 0,
 		ingredients: [],
 		instructions: [],
 	});
+	const [matchingProducts, setMatchingProducts] = React.useState([]);
 
-	React.useEffect(() => {
-		const timeout = setTimeout(() => {
-			axios.get('http://localhost:8000/api/recipes/1').then((response) => {
-				setRecipe(response.data);
-			});
-		}, 1000);
-		return () => clearTimeout(timeout);
+	const { id } = useParams();
+
+	React.useEffect(async () => {
+		const response = await APIRequest('get', `/api/recipes/${id}`);
+		setRecipe(response.data);
+	}, []);
+
+	React.useEffect(async () => {
+		const response = await APIRequest('get', `/api/recipes/${id}/getMatchingProducts`);
+		setMatchingProducts(response.data);
+		console.log(matchingProducts);
 	}, []);
 
 	return (

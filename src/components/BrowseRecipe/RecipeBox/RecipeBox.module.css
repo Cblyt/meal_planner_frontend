@@ -1,0 +1,46 @@
+img {
+    width: 33%;
+}
+
+.RecipeBox {
+    padding: 16px;
+    width: 250px;
+	text-align: center;
+	border: 1px solid #eee;
+	box-shadow: 0 2px 3px #ccc;
+	margin: 10px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.RecipeBox:hover,
+.Post:active {
+	background-color: #c0ddf5;
+}
+
+.RecipeBox h3{
+    text-transform: capitalize;
+	margin: 16px 0;
+	color:rgb(36, 152, 190);
+}
+
+.RecipeBox ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.RecipeBox li {
+    display: inline-block;
+    text-align: center;
+    padding: 5px 5%;
+    text-decoration: none;
+    color: rgb(36, 152, 190);
+}
+
+.RecipeBox hr {
+    height: 1px;
+    background-color: rgb(36, 152, 190);
+    border: 0;
+}

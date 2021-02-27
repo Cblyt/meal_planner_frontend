@@ -7,6 +7,10 @@ img {
     width: 66%;
 }
 
+.RecipeInfo h1{
+    text-transform: capitalize;
+}
+
 .RecipeInfo ul {
     list-style-type: none;
     margin: 0;

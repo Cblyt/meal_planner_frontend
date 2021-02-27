@@ -1,8 +1,8 @@
 import React from 'react';
 import classes from './IngredientForm.module.css';
-import IngredientControls from '../../../components/Layout/CreateRecipe/IngredientControls/IngredientControls';
+import IngredientControls from '../../../components/CreateRecipe/IngredientControls/IngredientControls';
 import Modal from '../../../components/UI/Modal/Modal';
-import IngredientSummary from '../../../components/Layout/CreateRecipe/IngredientSummary/IngredientSummary';
+import IngredientSummary from '../../../components/CreateRecipe/IngredientSummary/IngredientSummary';
 
 const IngredientForm = () => {
 	const [ingredients, setIngredients] = React.useState([]);

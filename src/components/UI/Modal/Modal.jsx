@@ -8,7 +8,6 @@ const Modal = ({ show, children, modalClosed }) => (
 		<Backdrop show={show} clicked={modalClosed} />
 		<div
 			className={classes.Modal}
-			clciked={modalClosed}
 			style={{
 				transform: show ? 'translateY(0)' : 'translateY(-100vh)',
 				opacity: show ? '1' : '0',
