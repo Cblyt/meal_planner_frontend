@@ -6,7 +6,6 @@ import InstructionControls from '../../components/CreateRecipe/InstructionContro
 import Input from '../../components/UI/Input/Input';
 
 const CreateRecipePage = () => {
-	// TODO: Get rid of "new" at the start of variable names
 	const [newRecipe, setNewRecipe] = React.useState({
 		name: '',
 		description: '',
@@ -111,10 +110,6 @@ const CreateRecipePage = () => {
 		<div className={classes.NewRecipe}>
 			<form onSubmit={handleSubmit}>
 				<Input name="name" onChange={handleChange} />
-				{/* <label htmlFor="name">
-					Name
-					<input name="name" onChange={handleChange} />
-				</label> */}
 				<label htmlFor="description">
 					Description
 					<input name="description" onChange={handleChange} />
@@ -136,6 +131,9 @@ const CreateRecipePage = () => {
 						<option>Hard</option>
 					</select>
 				</label>
+				<div className={classes.Label}>
+					Ingredients
+				</div>
 				<IngredientControls
 					ingredients={newRecipe.ingredients}
 					ingredientInc={incrementHandler}
@@ -174,6 +172,9 @@ const CreateRecipePage = () => {
 						New Ingredient
 
 					</button>
+				</div>
+				<div className={classes.Label}>
+					Instructions
 				</div>
 				<InstructionControls
 					instructions={newRecipe.method}

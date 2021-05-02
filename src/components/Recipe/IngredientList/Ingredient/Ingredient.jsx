@@ -5,7 +5,9 @@ import classes from './Ingredient.module.css';
 const Ingredient = ({ name, qty, units }) => (
 	<div className={classes.Ingredient}>
 		{name}
+		{' '}
 		{qty}
+		{' '}
 		{units}
 	</div>
 );

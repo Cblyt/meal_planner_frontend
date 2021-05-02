@@ -4,7 +4,7 @@ import Control from '../../UI/Control/Control';
 import classes from './InstructionControls.module.css';
 
 const InstructionControls = ({ instructions, deleteInstruction }) => (
-	<div className={classes.InstructionControls}>
+	<>
 		{ instructions ? (
 			instructions.map((instruction, index) => (
 				<Control key={instruction.id} label={instruction.content}>
@@ -18,7 +18,7 @@ const InstructionControls = ({ instructions, deleteInstruction }) => (
 				</Control>
 			)))
 			: null}
-	</div>
+	</>
 );
 
 InstructionControls.propTypes = {

@@ -4,6 +4,7 @@ const instruction = (props) => (
 	<div>
 		{props.stepNo}
 		.
+		{' '}
 		{props.instruction}
 	</div>
 );

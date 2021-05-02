@@ -6,7 +6,7 @@ import classes from './IngredientControls.module.css';
 const IngredientControls = ({
 	ingredients, ingredientInc, ingredientDec, deleteIngredient,
 }) => (
-	<div className={classes.IngredientControls}>
+	<>
 		{ ingredients ? (
 			ingredients.map((ctrl, index) => (
 				<Control key={ctrl.id} label={ctrl.name}>
@@ -30,7 +30,7 @@ const IngredientControls = ({
 				</Control>
 			)))
 			: null}
-	</div>
+	</>
 );
 
 IngredientControls.propTypes = {

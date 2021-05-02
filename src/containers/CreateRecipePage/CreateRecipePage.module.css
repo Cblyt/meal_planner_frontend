@@ -13,6 +13,13 @@
 	font-weight: bold;
 }
 
+.Label {
+	display:block;
+	margin:10px auto;
+	text-align: center;
+	font-weight: bold;
+}
+
 .NewRecipe input,
 .NewRecipe textarea,
 .NewRecipe select {
@@ -39,4 +46,14 @@
 .NewRecipe button:active {
 	color:white;
 	background: #fa923f;
+}
+
+.Controls {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	box-shadow: 0 2px 1px #ccc;
+	margin: auto;
+	padding: 10px 0;
 }
