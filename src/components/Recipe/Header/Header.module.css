@@ -27,8 +27,26 @@ img {
     color: rgb(36, 152, 190);
 }
 
+.RecipeInfo li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.RecipeInfo li a:hover {
+    background-color: white;
+}
+
+
 .RecipeInfo hr {
     height: 1px;
     background-color: rgb(36, 152, 190);
     border: 0;
+}
+
+.Controls {
+	position:absolute;
+	bottom: 20px;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import classes from './Header.module.css';
 
 const recipeHeader = (props) => (
@@ -26,6 +27,20 @@ const recipeHeader = (props) => (
 					{' '}
 					{props.difficulty}
 				</li>
+			</ul>
+			<hr />
+			<hr />
+			<ul>
+				<li>
+					Estimated cost $
+					{Number(props.recipeCheapestCost).toFixed(2)}
+					{' '}
+					at
+					{' '}
+					{props.recipeCheapestStore}
+				</li>
+				<li><Link to={`/cheapest-product-list/${props.id}`}>Check Product List</Link></li>
+				<li><button type="button" onClick={() => props.addToShoppingList(props.id)}>Add to shoppinglist</button></li>
 			</ul>
 			<hr />
 		</div>
