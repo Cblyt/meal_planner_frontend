@@ -73,10 +73,15 @@ const CreateRecipePage = () => {
 	};
 
 	const handleIngredientChange = (e) => {
+		const re = /^[0-9\b]+$/;
 		setNewIngredient({
 			...newIngredient,
 			[e.target.name]:
-				e.target.name === 'amount' ? parseInt(e.target.value, 10) : e.target.value,
+				e.target.name === 'amount'
+					&& e.target.value !== ''
+					&& re.test(e.target.value)
+					? parseInt(e.target.value, 10)
+					: e.target.value,
 		});
 	};
 
@@ -108,7 +113,11 @@ const CreateRecipePage = () => {
 
 	return (
 		<div className={classes.NewRecipe}>
-			<form onSubmit={handleSubmit}>
+			<h1>Create Recipe Page</h1>
+			<form onSubmit={handleSubmit} className={classes.NewRecipeForm}>
+				<div className={classes.Label}>
+					General
+				</div>
 				<Input name="name" onChange={handleChange} />
 				<label htmlFor="description">
 					Description
