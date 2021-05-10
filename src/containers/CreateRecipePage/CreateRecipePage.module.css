@@ -1,20 +1,23 @@
 .NewRecipe {
-	width: 80%;
-	margin: 20px;
+	width: 500px;
+	justify-content: center;
+	margin:auto;
 	border: 1px solid #eee;
 	box-shadow: 0 2px 3px #ccc;
 	text-align: center;
 }
 
+.NewRecipeForm {
+	display: inherit;
+	width:100%;
+}
+
 .NewRecipe label {
-	display:block;
 	margin:10px auto;
 	text-align: center;
-	font-weight: bold;
 }
 
 .Label {
-	display:block;
 	margin:10px auto;
 	text-align: center;
 	font-weight: bold;
@@ -49,7 +52,6 @@
 }
 
 .Controls {
-	width: 100%;
 	display: flex;
 	flex-flow: column;
 	align-items: center;

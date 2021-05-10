@@ -25,12 +25,12 @@ const RecipePage = ({ addRecipeToShoppingList }) => {
 	}, []);
 
 	React.useEffect(async () => {
-		const response = await APIRequest('get', `/api/recipes/${id}/getCheapestMatchingProducts`);
+		const response = await APIRequest('get', `/api/getCheapestMatchingProducts/${id}`);
 		setMatchingProducts(response.data);
 	}, []);
 
 	return (
-		<>
+		<div>
 			<Header
 				id={id}
 				title={recipe.name}
@@ -47,7 +47,7 @@ const RecipePage = ({ addRecipeToShoppingList }) => {
 				<IngredientList ingredients={recipe.ingredients} />
 				<Method instructions={recipe.instructions} />
 			</div>
-		</>
+		</div>
 	);
 };
 

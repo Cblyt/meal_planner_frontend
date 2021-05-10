@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ProductListItem from '../../components/ProductList/ProductListItem/ProductListItem';
 
-const ShoppingList = ({ list }) => (
+const ProductList = ({ list }) => (
 	<div style={{ width: '500px' }}>
 		{list.map((item) => (
 			<ProductListItem
@@ -15,7 +15,7 @@ const ShoppingList = ({ list }) => (
 	</div>
 );
 
-ShoppingList.propTypes = {
+ProductList.propTypes = {
 	list: PropTypes.arrayOf(PropTypes.shape({
 		id: PropTypes.number,
 		name: PropTypes.string,
@@ -23,4 +23,4 @@ ShoppingList.propTypes = {
 	})).isRequired,
 };
 
-export default ShoppingList;
+export default ProductList;
