@@ -9,7 +9,7 @@ const ingredientList = (props) => (
 			<RecipeIngredient
 				key={ingredient.name}
 				name={ingredient.name}
-				qty={ingredient.qty}
+				qty={ingredient.amount}
 				units={ingredient.units}
 			/>
 		))}

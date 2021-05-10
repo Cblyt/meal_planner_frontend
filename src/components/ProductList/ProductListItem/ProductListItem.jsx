@@ -7,9 +7,8 @@ const ProductListItem = ({ productName, ingredientName, price }) => (
 		{ingredientName}
 		{' ===> '}
 		{productName}
-		{' - '}
+		{' '}
 		{price}
-
 	</div>
 );
 
